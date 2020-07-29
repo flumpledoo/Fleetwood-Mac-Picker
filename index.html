@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="initial-scale=1.0">
-    <title>Favourite CSH Song Picker</title>
+    <title>Favourite Fleetwood Mac Song Picker</title>
     <style>
         body {
             background: #FFF;
@@ -240,7 +240,7 @@
 </head>
 
 <body>
-    <h1>Car Seat Headrest Favourite Song Picker</h1>
+    <h1>Fleetwood Mac Favourite Song Picker</h1>
 
     <p>Note: Songs appearing on multiple albums listed under the album of their first appearance.</p>
 
@@ -262,17 +262,11 @@
 
         <div id="secondary">
             <p>Include Albums: <br>
-                <label><input type="checkbox" name="albums" class="albums" value="1"> 1</label>
-                <label><input type="checkbox" name="albums" class="albums" value="2"> 2</label>
-                <label><input type="checkbox" name="albums" class="albums" value="3"> 3</label>
-                <label><input type="checkbox" name="albums" class="albums" value="4"> 4</label>
-                <label><input type="checkbox" name="albums" class="albums" value="myback"> My Back Is Killing Me Baby</label> <br>
-                <label><input type="checkbox" name="albums" class="albums" value="tf"> Twin Fantasy</label>
-                <label><input type="checkbox" name="albums" class="albums" value="htlt"> How To Leave Town</label> <br>
-                <label><input type="checkbox" name="albums" class="albums" value="mono"> Monomania</label>
-                <label><input type="checkbox" name="albums" class="albums" value="nym"> Nervous Young Man</label> <br>
-                <label><input type="checkbox" name="albums" class="albums" value="tod"> Teens of Denial</label>
-                <label><input type="checkbox" name="albums" class="albums" value="other"> B-Sides, etc.</label>
+                <label><input type="checkbox" name="albums" class="albums" value="white"> Fleetwood Mac (White Album)</label>
+                <label><input type="checkbox" name="albums" class="albums" value="rumours"> Rumours</label>
+                <label><input type="checkbox" name="albums" class="albums" value="tusk"> Tusk</label>
+                <label><input type="checkbox" name="albums" class="albums" value="mirage"> Mirage</label>
+                <label><input type="checkbox" name="albums" class="albums" value="tango"> Tango in the Night</label>
             </p>
             <h2>Found favorites</h2>
 
@@ -292,9 +286,9 @@
 
         var myPicker = new picker.Picker({
             items: items,
-            localStorageKey: 'csh-state',
+            localStorageKey: 'fltwd-state',
             defaultSettings: {
-                albums: ['myback', 'tf', 'htlt', 'mono', 'nym', 'tod']
+                albums: ['white', 'rumours', 'tusk', 'mirage', 'tango']
             },
             shouldIncludeItem: function(item, settings) {
                 return settings.albums.indexOf(item.album) !== -1;
